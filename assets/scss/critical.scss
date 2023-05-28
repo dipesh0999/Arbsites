@@ -1,7 +1,273 @@
 // First Fold css
+@import 'reset';
+@import 'variables';
+@import 'colors';
+@import 'functions';
+@import 'mixins';
+@import 'font-size';
 
+@import 'fonts';
 // HEADER
-
-
+header{
+    position: fixed;
+    width: 100%;
+    .contact{
+        background-color: $primary;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: $white;
+        font-weight: $fw_thin;
+        padding: vw(0.5) 0;
+        font-size: $fs_16;
+        span{
+            color: $secondary;
+        }
+        h6{
+            @include mobile(){
+                display: none;
+            }
+            &.call{
+                @include mobile(){
+                    display: block;
+                    text-align: center;
+                    font-size: vw(14, 414);
+                    padding: vw(1, 414) 0;
+                }
+            }
+        }
+    }
+    .navigation{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $white;
+        padding: vw(10) vw(100);
+        box-shadow: 0px 10px 10px -14px rgba(0,0,0,1);
+        position: relative;
+        @include mobile(){
+            padding: vw(10, 414) vw(20, 414);
+            justify-content: space-evenly;
+        }
+        .logoNav{
+            a{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: $fs_18;
+                font-weight: $fw_semibold;
+                color: $blue_light;
+                gap: vw(15);
+                @include mobile(){
+                    font-size: vw(16, 414);
+                    gap: vw(40, 414);
+                }
+            }
+            h4{
+                transition: all .3s ease-in;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+            img{
+                width: vw(47);
+                @include mobile(){
+                    width: vw(47, 414);
+                }
+            }
+        }
+        .navBttns{
+            display: flex;
+            align-items: center;
+            gap: vw(128);
+            @include mobile(){
+                display: none;
+            }
+            a{
+                font-size: $fs_18;
+                font-weight: $fw_semibold;
+                color: $blue_light;
+                transition: all 0.3s ease-in;
+                &:hover{
+                    color: $secondary;
+                }
+            }
+            .navFlex{
+                display: flex;
+                align-items: center;
+                gap: vw(10);
+                svg{
+                    path{
+                        transition: all 0.3s ease-in;
+                    }
+                }
+                &:hover{
+                    svg{
+                        path{
+                            stroke: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+        .sub{
+            position: absolute;
+            top:vw(60);
+            right:vw(710);
+            text-align: center;
+            background-color: $white;
+            padding: vw(20) vw(30);
+            display: none;
+            a{
+                display: block;
+                border-top: 1px solid $blue_light;
+                padding-top: vw(2);
+                &:nth-child(1),&:nth-child(2){
+                    border-top: none;
+                }
+            }
+        }
+        .navFlex{
+            &:hover{
+                span{
+                    .sub{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .mobMenu{
+            display: none;
+            @include mobile(){
+                display: block;
+                .menu{
+                    position: relative;
+                    width: vw(64, 414);
+                    height: vw(30, 414);
+                    cursor: pointer;
+                    &::before{
+                        content: 'Menu';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background-color: $secondary;
+                        padding: vw(5,414) vw(15,414);
+                        color: $primary;
+                        cursor: pointer;
+                        font-size: vw(16, 414);
+                        border-radius: vw(3, 414);
+                    }
+                }
+            }
+        }
+    }
+}
+.bgBttn{
+    background-color: $secondary;
+    color: $primary_light;
+    padding: vw(5) vw(10);
+    border-radius: vw(5);
+    &:hover{
+        background-color: $primary_light;
+        color: $secondary;
+    }
+}
 
 // BANNER
+.wrapper{
+    position: relative;
+}
+.banner{
+    picture{
+        img{
+            width: 100%;
+            height: 100vh;
+            @include mobile(){
+                object-fit: cover;
+            }
+        }
+    }
+    .banner-content{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: vw(693);
+        background-color: $primary_light_80;
+        padding: vw(40) vw(80);
+        border-radius: vw(10);
+        transition: all .3s ease-in;
+        @include mobile(){
+            width: 90vw;
+            padding: vw(20, 414) vw(40, 414);
+        }
+        h2{
+            font-size: $fs_40;
+            font-weight: $fw_bold;
+            color: $white;
+            margin-bottom: vw(20);
+            span{
+                color: $secondary;
+            }
+            @include mobile(){
+                font-size: vw(22, 414);
+            }
+        }
+        &:hover{
+            background-color: $secondary_80;
+            h2{
+                span{
+                    color: $primary_light;
+                }
+            }
+            a{
+                color: $white;
+                background-color: $primary_light_80;
+            }
+        }
+        a{
+            transition: all .3s ease-in;
+            @include mobile(){
+                font-size: vw(14, 414);
+                padding: vw(5, 414) vw(10, 414);
+            }
+        }
+    }
+    .scroll{
+        position: absolute;
+        top:vw(850);
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        @include mobile(){
+            bottom: vw(105, 414);
+            top: auto;
+        }
+        a{
+            color: $white;
+            display: inline-block;
+            transition: all .3s ease-in;
+            h5{
+                font-size: $fs_16;
+                font-weight: $fw_regular;
+                margin-bottom: vw(10);
+                @include mobile(){
+                 font-size: vw(16, 414);
+                 margin-bottom: vw(10, 414);   
+                }
+            }
+            &:hover{
+                color: $secondary;
+                svg{
+                    path{
+                        stroke: $secondary;
+                    }
+                    react{
+                        stroke: $secondary;
+                    }
+                }
+            }
+        }
+    }
+}
