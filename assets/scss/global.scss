@@ -15,7 +15,7 @@ a{
     width: 100%;
 
 	@include max_breakpoint(1920px) {
-		max-width: 92.5%;
+		max-width: 80%;
         margin: 0 auto;
 	}
 

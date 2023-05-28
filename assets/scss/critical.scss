@@ -11,6 +11,7 @@
 header{
     position: fixed;
     width: 100%;
+    z-index: 99;
     .contact{
         background-color: $primary;
         display: flex;
@@ -166,7 +167,7 @@ header{
     background-color: $secondary;
     color: $primary_light;
     padding: vw(5) vw(10);
-    border-radius: vw(5);
+    border-radius: vw(2);
     &:hover{
         background-color: $primary_light;
         color: $secondary;
@@ -174,10 +175,9 @@ header{
 }
 
 // BANNER
-.wrapper{
-    position: relative;
-}
 .banner{
+    position: relative;
+    margin-bottom: vw(150);
     picture{
         img{
             width: 100%;
