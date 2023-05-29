@@ -1,0 +1,77 @@
+.service{
+    background-color: $black_thin;
+    padding: vw(100) 0;
+    h1{
+        text-align: center;
+        color: $blue_light;
+        font-size: $fs_32;
+        font-weight: $fw_bold;
+        margin-bottom: vw(80);
+        position: relative;
+        &::after{
+            content: '';
+            position: absolute;
+            width: vw(100);
+            height: vw(2);
+            background-color: $secondary;
+            left: 50%;
+            transform: translate(-50%);
+            top:vw(70);
+        }
+    }
+    .serviceFlex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: vw(1000);
+        margin: 0 auto;
+        .offer{
+            width: vw(261);
+            text-align: center;
+            margin: 0 auto vw(60);
+            .servicebox{
+                margin: 0 auto;
+                margin-bottom:vw(10);
+                background-color: $white;
+                padding: vw(15);
+                width: vw(100);
+                svg{
+                    margin: 0 auto;
+                }
+            }
+            &:hover{
+                .star1{
+                    border-radius: vw(76) vw(130) vw(57) vw(100);
+                }
+            }
+            .star1{
+                border-radius: vw(130) vw(76) vw(100) vw(57);
+                transition: all .5s ease-in;
+            }
+            .light1{
+                border-radius: vw(100) vw(70) vw(200) vw(157);
+                transition: all .5s ease-in;
+            }
+            h3{
+                font-size: $fs_20;
+                font-weight: $fw_medium;
+                color: $blue_light;
+                margin-bottom: vw(25);
+            }
+            p{
+                font-size: $fs_16;
+                font-weight: $fw_regular;
+                color: $blue_light;
+                margin-bottom: vw(25);
+            }
+            a{
+                font-size: $fs_20;
+                font-weight: $fw_bold;
+                color: $secondary;
+                border-bottom: 1px solid $secondary;
+                display: inline-block;
+            }
+        }
+    }
+}

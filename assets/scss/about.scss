@@ -3,7 +3,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: vw(100);
+        padding-bottom: vw(200);
         @include mobile(){
             flex-direction: column;
             gap: vw(50, 414);
@@ -49,7 +49,7 @@
                 }
                 &:nth-child(1){
                     margin-top:vw(0);
-                    z-index: 99;
+                    z-index: 9;
                     top: vw(30);
                     left: vw(-30);
                     @include mobile(){
