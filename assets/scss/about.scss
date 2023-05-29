@@ -3,42 +3,99 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: vw(100);
+        @include mobile(){
+            flex-direction: column;
+            gap: vw(50, 414);
+        }
         .about-content{
-            width: vw(550);
+            width: vw(435);
+            @include mobile(){
+                width: 100%;
+            }
             p{
                 position: relative;
                 margin-bottom: vw(50);
+                font-size: vw(20);
+                color: $blue_light;
+                @include mobile(){
+                    font-size:vw(16, 414);
+                    margin-bottom: vw(30, 414);
+                }
                 &::after{
                     content: '';
                     position: absolute;
                     width: vw(100);
                     background-color: $secondary;
                     height: vw(2);
-                    top:vw(100);
+                    top:vw(140);
                     left: vw(0);
+                    @include mobile(){
+                        width: vw(100, 414);
+                        top:vw(108, 414);
+                        left: vw(1, 414);
+                    }
                 }
             }
         }
         .slickSlider{
             .slider-img{
                 position: relative;
+                img{
+                    width: vw(341);
+                    @include mobile(){
+                        width: 100%;
+                    }
+                }
                 &:nth-child(1){
                     margin-top:vw(0);
+                    z-index: 99;
+                    top: vw(30);
+                    left: vw(-30);
+                    @include mobile(){
+                        top: auto;
+                        left: auto;
+                    }
                 }
                 &:nth-child(2){
                     margin-top:vw(-257);
                 }
                 &:nth-child(3){
                     margin-top:vw(-257);
-                    z-index: 999;
                 }
                 .imgCont{
+                    width: vw(300);
+                    margin-left: vw(20);
                     position: absolute;
                     z-index: 1;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
                     align-items: center;
-                    bottom: 0;
+                    bottom: vw(5);
+                    text-align: center;
+                    color: $white;
+                    gap: vw(15);
+                    svg{
+                        width: vw(50);
+                        cursor: pointer;
+                        &:nth-child(1){
+                            transform: rotate(180deg);
+                        }
+                        @include mobile(){
+                            width: vw(25, 414);
+                        }
+                    }
+                    @include mobile(){
+                        width: vw(250, 414);
+                        margin-left: vw(40, 414);
+                    }
+                    p{
+                        font-size: $fs_18;
+                        font-weight: $fw_regular;
+                        @include mobile(){
+                            font-size: vw(12, 414);
+                        }
+                    }
                 }
             }
         }

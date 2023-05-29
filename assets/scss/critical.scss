@@ -168,9 +168,15 @@ header{
     color: $primary_light;
     padding: vw(5) vw(10);
     border-radius: vw(2);
+    font-size: $fs_16;
     &:hover{
         background-color: $primary_light;
         color: $secondary;
+    }
+    @include mobile(){
+        padding: vw(5, 414) vw(10, 414);
+        border-radius: vw(2, 414);
+        font-size: vw(12, 414);
     }
 }
 
@@ -257,13 +263,16 @@ header{
                  margin-bottom: vw(10, 414);   
                 }
             }
+            svg{
+                transition: all .3s ease-in;
+            }
             &:hover{
                 color: $secondary;
                 svg{
                     path{
                         stroke: $secondary;
                     }
-                    react{
+                    rect{
                         stroke: $secondary;
                     }
                 }
