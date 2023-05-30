@@ -19,10 +19,11 @@ header{
         align-items: center;
         color: $white;
         font-weight: $fw_thin;
-        padding: vw(0.5) 0;
-        font-size: $fs_16;
-        span{
+        padding: vw(4) 0;
+        font-size: $fs_21;
+        a{
             color: $secondary;
+            font-size: $fs_21;
         }
         h6{
             @include mobile(){
@@ -43,7 +44,7 @@ header{
         justify-content: space-between;
         align-items: center;
         background-color: $white;
-        padding: vw(10) vw(100);
+        padding: vw(12) vw(100);
         box-shadow: 0px 10px 10px -14px rgba(0,0,0,1);
         position: relative;
         @include mobile(){
@@ -55,7 +56,7 @@ header{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                font-size: $fs_18;
+                font-size: $fs_24;
                 font-weight: $fw_semibold;
                 color: $blue_light;
                 gap: vw(15);
@@ -63,11 +64,11 @@ header{
                     font-size: vw(16, 414);
                     gap: vw(40, 414);
                 }
-            }
-            h4{
-                transition: all .3s ease-in;
-                &:hover{
-                    color: $secondary;
+                h4{
+                    transition: all .3s ease-in;
+                    &:hover{
+                        color: $secondary;
+                    }
                 }
             }
             img{
@@ -85,7 +86,7 @@ header{
                 display: none;
             }
             a{
-                font-size: $fs_18;
+                font-size: $fs_24;
                 font-weight: $fw_semibold;
                 color: $blue_light;
                 transition: all 0.3s ease-in;
@@ -166,9 +167,9 @@ header{
 .bgBttn{
     background-color: $secondary;
     color: $primary_light;
-    padding: vw(5) vw(10);
+    padding: vw(8) vw(14);
     border-radius: vw(2);
-    font-size: $fs_16;
+    font-size: $fs_24;
     &:hover{
         background-color: $primary_light;
         color: $secondary;
@@ -183,7 +184,7 @@ header{
 // BANNER
 .banner{
     position: relative;
-    margin-bottom: vw(150);
+    margin-bottom: vw(195);
     picture{
         img{
             width: 100%;
@@ -194,26 +195,12 @@ header{
         }
     }
     .banner-content{
-        &:has(a){
-            &:hover{
-                background-color: $secondary_80;
-                h2{
-                    span{
-                        color: $primary_light;
-                    }
-                }
-                a{
-                    color: $white;
-                    background-color: $primary_light_80;
-                }
-            }
-        }
         position: absolute;
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        width: vw(693);
+        width: vw(1200);
         background-color: $primary_light_80;
         padding: vw(40) vw(80);
         border-radius: vw(10);
@@ -223,7 +210,7 @@ header{
             padding: vw(20, 414) vw(40, 414);
         }
         h2{
-            font-size: $fs_40;
+            font-size: $fs_60;
             font-weight: $fw_bold;
             color: $white;
             margin-bottom: vw(20);
@@ -235,7 +222,16 @@ header{
             }
         }
         &:hover{
-            
+            background-color: $secondary_80;
+            h2{
+                span{
+                    color: $primary_light;
+                }
+            }
+            a{
+                color: $white;
+                background-color: $primary_light_80;
+            }
         }
         a{
             transition: all .3s ease-in;
@@ -260,7 +256,7 @@ header{
             display: inline-block;
             transition: all .3s ease-in;
             h5{
-                font-size: $fs_16;
+                font-size: $fs_24;
                 font-weight: $fw_regular;
                 margin-bottom: vw(10);
                 @include mobile(){
@@ -270,6 +266,7 @@ header{
             }
             svg{
                 transition: all .3s ease-in;
+                margin: 0 auto;
             }
             &:hover{
                 color: $secondary;

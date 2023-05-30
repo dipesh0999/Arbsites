@@ -1,22 +1,22 @@
 .service{
     background-color: $black_thin;
-    padding: vw(100) 0;
+    padding: vw(180) 0;
     h1{
         text-align: center;
         color: $blue_light;
-        font-size: $fs_32;
+        font-size: $fs_48;
         font-weight: $fw_bold;
-        margin-bottom: vw(80);
+        margin-bottom: vw(78);
         position: relative;
         &::after{
             content: '';
             position: absolute;
-            width: vw(100);
+            width: vw(150);
             height: vw(2);
             background-color: $secondary;
             left: 50%;
             transform: translate(-50%);
-            top:vw(70);
+            top:vw(90);
         }
     }
     .serviceFlex{
@@ -24,15 +24,15 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        width: vw(1000);
-        margin: 0 auto;
+        width: vw(1366);
+        margin: 0 auto vw(87);
+        gap:vw(100);
         .offer{
-            width: vw(261);
+            width: vw(380);
             text-align: center;
-            margin: 0 auto vw(60);
             .servicebox{
                 margin: 0 auto;
-                margin-bottom:vw(10);
+                margin-bottom:vw(45);
                 background-color: $white;
                 padding: vw(15);
                 width: vw(100);
@@ -54,24 +54,37 @@
                 transition: all .5s ease-in;
             }
             h3{
-                font-size: $fs_20;
+                font-size: $fs_30;
                 font-weight: $fw_medium;
                 color: $blue_light;
                 margin-bottom: vw(25);
             }
             p{
-                font-size: $fs_16;
+                font-size: $fs_24;
                 font-weight: $fw_regular;
                 color: $blue_light;
                 margin-bottom: vw(25);
             }
             a{
-                font-size: $fs_20;
+                font-size: $fs_30;
                 font-weight: $fw_bold;
                 color: $secondary;
                 border-bottom: 1px solid $secondary;
                 display: inline-block;
             }
+        }
+    }
+    .serviceHelp{
+        background-color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: vw(35) 0;
+        gap: vw(50);
+        h3{
+            font-size: $fs_36;
+            font-weight: $fw_medium;
+            color: $blue_light;
         }
     }
 }
