@@ -194,6 +194,20 @@ header{
         }
     }
     .banner-content{
+        &:has(a){
+            &:hover{
+                background-color: $secondary_80;
+                h2{
+                    span{
+                        color: $primary_light;
+                    }
+                }
+                a{
+                    color: $white;
+                    background-color: $primary_light_80;
+                }
+            }
+        }
         position: absolute;
         top:50%;
         left: 50%;
@@ -221,16 +235,7 @@ header{
             }
         }
         &:hover{
-            background-color: $secondary_80;
-            h2{
-                span{
-                    color: $primary_light;
-                }
-            }
-            a{
-                color: $white;
-                background-color: $primary_light_80;
-            }
+            
         }
         a{
             transition: all .3s ease-in;
