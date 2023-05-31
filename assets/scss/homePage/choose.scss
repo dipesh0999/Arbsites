@@ -12,7 +12,9 @@
             gap:vw(30, 414);
         }
         .box{
-            margin-bottom: vw(30, 414);
+            @include mobile(){
+                margin-bottom: vw(30, 414);
+            }
         }
         h5{
             font-size: $fs_30;
