@@ -1,24 +1,5 @@
 .service{
     background-color: $black_thin;
-    padding: vw(180) 0;
-    h1{
-        text-align: center;
-        color: $blue_light;
-        font-size: $fs_48;
-        font-weight: $fw_bold;
-        margin-bottom: vw(78);
-        position: relative;
-        &::after{
-            content: '';
-            position: absolute;
-            width: vw(150);
-            height: vw(2);
-            background-color: $secondary;
-            left: 50%;
-            transform: translate(-50%);
-            top:vw(90);
-        }
-    }
     .serviceFlex{
         display: flex;
         justify-content: space-between;
@@ -27,9 +8,19 @@
         width: vw(1366);
         margin: 0 auto vw(87);
         gap:vw(100);
+        @include mobile(){
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 100%;
+            margin-bottom: vw(50, 414);
+            gap:vw(50, 414);
+        }
         .offer{
             width: vw(380);
             text-align: center;
+            @include mobile(){
+                width: 35%;
+            }
             .servicebox{
                 margin: 0 auto;
                 margin-bottom:vw(45);
@@ -38,6 +29,11 @@
                 width: vw(100);
                 svg{
                     margin: 0 auto;
+                }
+                @include mobile(){
+                    width: vw(100, 414);
+                    padding: vw(10, 414);
+                    margin-bottom: vw(10, 414);
                 }
             }
             &:hover{
@@ -48,6 +44,9 @@
             .star1{
                 border-radius: vw(130) vw(76) vw(100) vw(57);
                 transition: all .5s ease-in;
+                @include mobile(){
+                    border-radius: vw(130, 414) vw(76, 414) vw(100, 414) vw(57, 414);
+                }
             }
             .light1{
                 border-radius: vw(100) vw(70) vw(200) vw(157);
@@ -58,12 +57,18 @@
                 font-weight: $fw_medium;
                 color: $blue_light;
                 margin-bottom: vw(25);
+                @include mobile(){
+                    font-size: vw(18, 414);
+                }
             }
             p{
                 font-size: $fs_24;
                 font-weight: $fw_regular;
                 color: $blue_light;
                 margin-bottom: vw(25);
+                @include mobile(){
+                    font-size: vw(14, 414);
+                }
             }
             a{
                 font-size: $fs_30;
@@ -72,6 +77,9 @@
                 border-bottom: 1px solid $secondary;
                 display: inline-block;
                 transition: all 0.3s ease-in;
+                @include mobile(){
+                    font-size: vw(18, 414);
+                }
                 &:hover{
                     color: $primary_light;
                     border-bottom: 1px solid $primary_light;
@@ -90,6 +98,9 @@
             font-size: $fs_36;
             font-weight: $fw_medium;
             color: $blue_light;
+            @include mobile(){
+                font-size: vw(18, 414);
+            }
         }
     }
 }

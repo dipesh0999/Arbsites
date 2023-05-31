@@ -1,0 +1,93 @@
+.choose{
+    background-color: $white_medium;
+    .chooseFlex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-bottom: vw(75);
+        @include mobile(){
+            flex-wrap: wrap;
+            margin-bottom: vw(30, 414);
+            gap:vw(30, 414);
+        }
+        .box{
+            margin-bottom: vw(30, 414);
+        }
+        h5{
+            font-size: $fs_30;
+            font-weight: $fw_medium;
+            margin-bottom: vw(75);
+            @include mobile(){
+                font-size: vw(16, 414);
+                margin-bottom: vw(50, 414);
+            }
+        }
+        .boxContent{
+            width: vw(250);
+            height: vw(250);
+            border: 3px solid $secondary;
+            border-radius: 50%;
+            text-align: center;
+            @include mobile(){
+                width: vw(150, 414);
+                height: vw(150, 414);
+            }
+            img{
+                margin:  vw(-65) auto vw(20);
+                width: vw(120);
+                @include mobile(){
+                    width: vw(70, 414);
+                    margin:  vw(-35, 414) auto vw(20, 414);
+                }
+            }
+            h2{
+                font-size: $fs_55;
+                font-weight: $fw_bold;
+                color: $secondary;
+                @include mobile(){
+                    font-size: vw(24, 414);
+                }
+            }
+        }
+    }
+    .benefit{
+        background-color: $white;
+        padding: vw(30) vw(140);
+        @include mobile(){
+            padding: vw(20, 414);
+        }
+        img{
+            width: vw(90);
+            position: relative;
+            margin: 0 auto vw(12);
+            @include mobile(){
+                width: vw(40, 414);
+                margin-bottom: vw(15, 414);
+            }
+        }
+        &__flex{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: vw(30);
+            @include mobile(){
+                flex-direction: column;
+                gap: vw(20, 414);
+                text-align: center;
+            }
+            h4{
+                background: $white_medium;
+                padding: vw(5) vw(20);
+                font-size: $fs_30;
+                color: $blue_light;
+                @include mobile(){
+                    font-size: vw(18, 414);
+                    width: 80%;
+                    padding: vw(5, 414) vw(20, 414);
+                }
+            }
+        }
+    }
+}

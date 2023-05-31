@@ -14,9 +14,12 @@ a{
 
 .container{
     width: 100%;
-
+    padding: vw(120) 0;
+    @include mobile(){
+        padding: vw(90, 414) 0 vw(30, 414);
+    }
 	@include max_breakpoint(1920px) {
-		max-width: 80%;
+		max-width: 75%;
         margin: 0 auto;
 	}
 
@@ -26,4 +29,31 @@ a{
 		padding-right: 20px;
 		
 	}
+}
+
+.heading{
+    text-align: center;
+    color: $blue_light;
+    font-size: $fs_48;
+    font-weight: $fw_bold;
+    margin-bottom: vw(78);
+    position: relative;
+    @include mobile(){
+        font-size: vw(24, 414);
+        margin-bottom: vw(50, 414);
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: vw(150);
+        height: vw(2);
+        background-color: $secondary;
+        left: 50%;
+        transform: translate(-50%);
+        top:vw(90);
+        @include mobile(){
+            width: vw(80, 414);
+            top:vw(50, 414);
+        }
+    }
 }
