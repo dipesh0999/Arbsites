@@ -60,15 +60,13 @@ header{
                 font-weight: $fw_semibold;
                 color: $blue_light;
                 gap: vw(15);
+                transition: all .3s ease-in;
                 @include mobile(){
                     font-size: vw(16, 414);
                     gap: vw(40, 414);
                 }
-                h4{
-                    transition: all .3s ease-in;
-                    &:hover{
-                        color: $secondary;
-                    }
+                &:hover{
+                    color: $secondary;
                 }
             }
             img{

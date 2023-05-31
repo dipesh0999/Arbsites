@@ -71,6 +71,11 @@
                 color: $secondary;
                 border-bottom: 1px solid $secondary;
                 display: inline-block;
+                transition: all 0.3s ease-in;
+                &:hover{
+                    color: $primary_light;
+                    border-bottom: 1px solid $primary_light;
+                }
             }
         }
     }
