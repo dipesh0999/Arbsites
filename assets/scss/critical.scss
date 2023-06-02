@@ -96,6 +96,7 @@ header{
                 display: flex;
                 align-items: center;
                 gap: vw(10);
+                position: relative;
                 svg{
                     path{
                         transition: all 0.3s ease-in;
@@ -127,23 +128,14 @@ header{
                 }
             }
         }
-        .navFlex{
-            &:hover{
-                span{
-                    .sub{
-                        display: block;
-                    }
-                }
-            }
-        }
         .mobMenu{
             display: none;
             @include mobile(){
                 display: block;
                 .menu{
                     position: relative;
-                    width: vw(64, 414);
-                    height: vw(30, 414);
+                    width: vw(70, 414);
+                    height: vw(35, 414);
                     cursor: pointer;
                     &::before{
                         content: 'Menu';
@@ -243,7 +235,7 @@ header{
     }
     .scroll{
         position: absolute;
-        top:vw(850);
+        bottom:vw(60);
         left: 50%;
         transform: translate(-50%);
         text-align: center;
