@@ -1,0 +1,51 @@
+.accreditation{
+    background-color: $white_medium;
+    p{
+        text-align: center;
+        font-size: vw(30);
+        color: $blue_light;
+        margin-bottom: vw(70);
+        @include mobile(){
+            font-size: vw(16, 414);
+            margin-bottom: vw(25, 414);
+        }
+    }
+    .flexImg{
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: vw(35) vw(30);
+        margin-bottom: vw(40);
+        @include mobile(){
+            padding: vw(15, 414);
+            margin-bottom: vw(20, 414);
+        }
+        .slick-track{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        img{
+            margin: 0 vw(20);
+        }
+    }
+    .learnFlex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:vw(20);
+        @include mobile(){
+            gap:vw(15, 414);
+        }
+        span{
+            width: vw(100);
+            height: vw(3);
+            background-color: $secondary;
+            @include mobile(){
+                width: vw(50, 414);
+                height: vw(2, 414);
+            }
+        }
+    }
+}

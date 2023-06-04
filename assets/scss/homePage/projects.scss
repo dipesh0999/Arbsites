@@ -9,8 +9,12 @@
             flex-direction: column;
         }
         .box{
-            width: vw(400) !important;
+            width: vw(300) !important;
             text-align: center;
+            transition: all 0.3s ease-in;
+            &:hover{
+                scale: (1.1);
+            }
             @include mobile(){
                 margin-bottom: vw(50, 414);
                 width: 100% !important;
