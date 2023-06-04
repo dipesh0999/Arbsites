@@ -1,0 +1,57 @@
+.projects{
+    background-color: $black_thin;
+    .projectFlex{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: vw(70);
+        @include mobile(){
+            flex-direction: column;
+        }
+        .box{
+            width: vw(400) !important;
+            text-align: center;
+            @include mobile(){
+                margin-bottom: vw(50, 414);
+                width: 100% !important;
+            }
+            .imgBox{
+                width: 100%;
+                position: relative;
+                margin-bottom: vw(20);
+                @include mobile(){
+                    margin-bottom: vw(20, 414);
+                }
+                img{
+                    margin: 0 auto;
+                }
+                h6{
+                    position: absolute;
+                    left:50%;
+                    transform: translate(-50%);
+                    bottom: vw(10);
+                    width: 100%;
+                    color: $white;
+                    font-size: vw(22);
+                    font-weight: $fw_medium;
+                    @include mobile(){
+                        font-size: vw(18, 414);
+                        bottom: vw(10, 414);
+                    }
+                }
+            }
+            p{
+                @include mobile(){
+                    width: 60vw;
+                    margin: 0 auto;
+                    font-size: vw(18, 414) !important;
+                }
+            }
+        }
+    }
+    .Help2{
+        @include mobile(){
+            flex-direction: column;
+        }
+    }
+}

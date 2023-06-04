@@ -8,11 +8,11 @@
 
     $('html').removeClass('no-js');
 
-    $body.on('click', '.btn-menu', function (e) {
-        $body.toggleClass('menu-open');
+    $body.on('click', '.menu', function (e) {
+        $body.toggleClass('.menuActive');
     });
 
-    $body.on('click', '.close-nav', function (e) {
+    $body.on('click', '.menu', function (e) {
         $body.removeClass('menu-open');
     });
 
@@ -29,3 +29,30 @@
         oldScroll = wTop;
     }, { passive: true });
 }.call(window, window.jQuery);
+
+$('.slickSlider').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 5,
+    arrows:false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });

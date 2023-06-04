@@ -24,6 +24,9 @@ header{
         a{
             color: $secondary;
             font-size: $fs_21;
+            @include mobile(){
+                font-size: vw(12, 414);
+            }
         }
         h6{
             @include mobile(){
@@ -96,42 +99,106 @@ header{
                 display: flex;
                 align-items: center;
                 gap: vw(10);
-                position: relative;
                 svg{
+                    transition: all 0.3s ease-in;
                     path{
                         transition: all 0.3s ease-in;
                     }
                 }
                 &:hover{
                     svg{
+                        transform: rotate(180deg);
                         path{
                             stroke: $secondary;
                         }
                     }
                 }
             }
-        }
-        .sub{
-            position: absolute;
-            top:vw(60);
-            right:vw(710);
-            text-align: center;
-            background-color: $white;
-            padding: vw(20) vw(30);
-            display: none;
-            a{
-                display: block;
-                border-top: 1px solid $blue_light;
-                padding-top: vw(2);
-                &:nth-child(1),&:nth-child(2){
-                    border-top: none;
+            .navFlex1{
+                position: relative;
+                transition: all 0.5s ease-in;
+                &:hover{
+                    .sub{
+                        opacity: 1;
+                        z-index: 99;
+                        top:vw(50);
+                    }
+                }
+                .sub{
+                    position: absolute;
+                    top:vw(-500);
+                    right:vw(-52);
+                    text-align: center;
+                    background-color: $white;
+                    padding: vw(20) vw(30);
+                    opacity: 0;
+                    transition: all 0.6s ease-in;
+                    z-index: -999;
+                    li{
+                        width: vw(170);
+                        &:nth-child(1){
+                            a{
+                                border-top: none;
+                                &:hover{
+                                    border-top: none;
+                                }
+                            }
+                        }
+                        a{
+                            border-top: 1px solid $blue_light;
+                            padding-top: vw(2);
+                            &:hover{
+                                border-top: 1px solid $secondary;
+                            }
+                        }
+                    }
+                }
+            }
+            .navFlex2{
+                position: relative;
+                transition: all 0.5s ease-in;
+                &:hover{
+                    .sub{
+                        opacity: 1;
+                        z-index: 99;
+                        top:vw(50);
+                    }
+                }
+                .sub{
+                    position: absolute;
+                    top:vw(-500);
+                    right:vw(-105);
+                    text-align: center;
+                    background-color: $white;
+                    padding: vw(20) vw(30);
+                    opacity: 0;
+                    transition: all 0.6s ease-in;
+                    z-index: -999;
+                    li{
+                        width: vw(220);
+                        &:nth-child(1){
+                            a{
+                                border-top: none;
+                                &:hover{
+                                    border-top: none;
+                                }
+                            }
+                        }
+                        a{
+                            display: block;
+                            border-top: 1px solid $blue_light;
+                            padding-top: vw(2);
+                        }
+                    }
                 }
             }
         }
+
         .mobMenu{
             display: none;
             @include mobile(){
                 display: block;
+                position: relative;
                 .menu{
                     position: relative;
                     width: vw(70, 414);
@@ -148,6 +215,45 @@ header{
                         cursor: pointer;
                         font-size: vw(16, 414);
                         border-radius: vw(3, 414);
+                    }
+                }
+                .menuActive{
+                    &::before{
+                        content: 'Close' !important;
+                        background-color: $primary_light !important;
+                        color: $secondary !important;
+                    }
+                }
+                .mobNav{
+                    position: absolute;
+                    width: 100vw;
+                    background: white;
+                    padding: 14px;
+                    right: -44px;
+                    top: 48px;
+                    display: none;
+                    ul{
+                        li{
+                            margin-bottom: vw(10, 414);
+                            a{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-size: vw(16, 414);
+                                color: $blue_light;
+                            }
+                            .navFlexMob{
+                                svg{
+                                    transform: rotate(180deg);
+                                }
+                            }
+                        }
+                        .sub{
+                            display: none;
+                        }
+                        .subOpen{
+                            display: block;
+                        }
                     }
                 }
             }

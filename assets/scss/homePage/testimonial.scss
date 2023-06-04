@@ -1,0 +1,95 @@
+.testimonial{
+    position: relative;
+    picture{
+        img{
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+    .container{
+        position: absolute;
+        background-color: $primary_light_80;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: vw(50);
+        border-radius: vw(10);
+        h2{
+            margin-bottom: vw(80);
+            text-align: center;
+            color: $white;
+            font-size: $fs_48;
+            &::after{
+                content: '';
+                position: absolute;
+                width: vw(200);
+                height: vw(2);
+                background-color: $secondary;
+                top: vw(130);
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+        .slickSlider{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            svg{
+                cursor: pointer;
+                path{
+                    fill:$white;
+                    transition: all .3s ease-in;
+                }
+                &:hover{
+                    path{
+                        fill:$secondary;
+                    }
+                }
+                &:nth-child(1){
+                    transform: rotate(90deg);
+                }
+                &:nth-child(3){
+                    transform: rotate(270deg);
+                }
+            }
+            .content{
+                display: flex;
+                align-items: flex-end;
+                gap: vw(50);
+                .slider{
+                    width: vw(300);
+                    padding: vw(20);
+                    background-color: $white;
+                    border-radius: vw(10) vw(10) vw(10) 0;
+                }
+            }
+        }
+        .ratings{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: vw(50);
+            margin-bottom: vw(30);
+            gap: vw(10);
+            .starThin{
+                width:vw(18);
+            }
+            .starMedium{
+                width:vw(22);
+            }
+            .starLarge{
+                width:vw(24);
+            }
+            span{
+                width:vw(450);
+                height: vw(2);
+                background-color: $secondary;
+            }
+        }
+        .ratingPara{
+            font-size: vw(32);
+            text-align: center;
+            color: $white;
+        }
+    }
+}

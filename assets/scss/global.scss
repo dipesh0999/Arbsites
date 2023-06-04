@@ -11,6 +11,9 @@ html {
 a{
     text-decoration: none;
 }
+ul{
+    list-style: none;
+}
 
 .container{
     width: 100%;
@@ -55,5 +58,45 @@ a{
             width: vw(80, 414);
             top:vw(50, 414);
         }
+    }
+}
+.Help{
+    background-color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: vw(35) 0;
+    gap: vw(50);
+    h3{
+        font-size: $fs_36;
+        font-weight: $fw_medium;
+        color: $blue_light;
+        @include mobile(){
+            font-size: vw(18, 414);
+        }
+    }
+}
+.flexPara{
+    font-size: $fs_24;
+    font-weight: $fw_regular;
+    color: $blue_light;
+    margin-bottom: vw(25);
+    @include mobile(){
+        font-size: vw(14, 414);
+    }
+}
+.viewLink{
+    font-size: $fs_30;
+    font-weight: $fw_bold;
+    color: $secondary;
+    border-bottom: 1px solid $secondary;
+    display: inline-block;
+    transition: all 0.3s ease-in;
+    @include mobile(){
+        font-size: vw(18, 414);
+    }
+    &:hover{
+        color: $primary_light;
+        border-bottom: 1px solid $primary_light;
     }
 }

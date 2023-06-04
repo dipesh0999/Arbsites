@@ -62,10 +62,8 @@
         img{
             width: vw(90);
             position: relative;
-            margin: 0 auto vw(12);
             @include mobile(){
                 width: vw(40, 414);
-                margin-bottom: vw(15, 414);
             }
         }
         &__flex{
@@ -89,6 +87,24 @@
                     width: 80%;
                     padding: vw(5, 414) vw(20, 414);
                 }
+            }
+        }
+    }
+    .rightBenefits{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: vw(10);
+        @include mobile(){
+            margin-bottom: vw(15, 414);
+        }
+        span{
+            width:vw(450);
+            height: vw(5);
+            background-color: $secondary;
+            border-radius: 50px;
+            @include mobile(){
+                width: vw(120, 414);
             }
         }
     }
