@@ -4,13 +4,17 @@
     // write code here
 
     $(".mobMenu .menu").click(function(e){
-      $(this).text("Close");
-      $(this).addClass("active");
-    });
-
-    $(".mobMenu .active").click(function(e){
+     if($(this).hasClass('active')){
       $(this).text("Menu");
       $(this).removeClass("active");
+     }else {
+      $(this).text("Close");
+      $(this).addClass("active");
+     }
+    });
+
+    $(".menu").click(function(){
+      $(".mobNav").toggle(1000);
     });
 
     $(".slickSlider").on("afterChange", function (event, slick, currentSlide, nextSlide) {

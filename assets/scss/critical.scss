@@ -370,3 +370,71 @@ header{
         }
     }
 }
+
+
+//Footer
+
+.contactUs{
+    position: relative;
+    .contactContent{
+        background-color: $primary_light_80;
+        padding: vw(20) vw(60);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        gap: vw(100);
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include mobile(){
+            padding: vw(30, 414) vw(20, 414);
+            flex-direction: column;
+        }
+        h1{
+            color: $white !important;
+            text-align: left;
+            &::after{
+                left: vw(80);
+                @include mobile(){
+                    left: vw(40, 414);
+                    margin-bottom: vw(15, 414) !important;
+                }
+            }
+        }
+        p{
+            font-size: $fs_32;
+            color: white;
+            font-weight: $fw_medium;
+            @include mobile(){
+                font-size: vw(16, 414);
+            }
+        }
+        .content{
+            .icons{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: vw(30);
+                margin-bottom: vw(15, 414);
+                h5{
+                    font-size: $fs_24;
+                    color: $white;
+                    font-weight: $fw_bold;
+                    @include mobile(){
+                        font-size: vw(12, 414);
+                    }
+                }
+                svg{
+                    width: vw(35);
+                    height: vw(35);
+                    @include mobile(){
+                        width: vw(20, 414);
+                        height: vw(20, 414);
+                    }
+                }
+            }
+        }
+    }
+}
