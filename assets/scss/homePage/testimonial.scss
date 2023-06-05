@@ -141,6 +141,7 @@
 .slick-prev{
     transform: rotate(90deg) !important;
     left: vw(95) !important;
+    opacity: 0.3;
     @include mobile(){
         left: vw(10, 414) !important;
     }

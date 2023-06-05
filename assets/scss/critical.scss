@@ -200,29 +200,19 @@ header{
                 display: block;
                 position: relative;
                 .menu{
-                    position: relative;
                     width: vw(70, 414);
                     height: vw(35, 414);
                     cursor: pointer;
-                    &::before{
-                        content: 'Menu';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background-color: $secondary;
-                        padding: vw(5,414) vw(15,414);
-                        color: $primary;
-                        cursor: pointer;
-                        font-size: vw(16, 414);
-                        border-radius: vw(3, 414);
-                    }
+                    background-color: $secondary;
+                    padding: vw(5,414) vw(10,414);
+                    color: $primary;
+                    font-size: vw(16, 414);
+                    border-radius: vw(3, 414);
+                    text-align: center;
                 }
-                .menuActive{
-                    &::before{
-                        content: 'Close' !important;
-                        background-color: $primary_light !important;
-                        color: $secondary !important;
-                    }
+                .active{
+                    background-color: $primary_light;
+                    color: $secondary;
                 }
                 .mobNav{
                     position: absolute;
