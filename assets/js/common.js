@@ -72,10 +72,11 @@
     $('.accreditation .flexImg').slick({
       dots: false,
       infinite: true,
-      speed: 300,
+      speed: 1500,
       autoplay: true,
       slidesToShow: 5,
       slidesToScroll: 1,
+      arrows: false,
       responsive: [
         {
           breakpoint: 1024,
