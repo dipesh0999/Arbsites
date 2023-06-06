@@ -417,7 +417,9 @@ header{
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: vw(30);
-                margin-bottom: vw(15, 414);
+                @include mobile(){
+                    margin-bottom: vw(15, 414);
+                }
                 h5{
                     font-size: $fs_24;
                     color: $white;
@@ -429,12 +431,115 @@ header{
                 svg{
                     width: vw(35);
                     height: vw(35);
+                    transition: all 0.3s ease-in;
+                    &:hover{
+                        opacity: 0.7;
+                    }
                     @include mobile(){
                         width: vw(20, 414);
                         height: vw(20, 414);
                     }
                 }
             }
+        }
+    }
+}
+
+.footerContent{
+    background-color: $primary;
+    padding: vw(50);
+    display: flex;
+    gap: vw(80);
+    align-items: flex-start;
+    @include mobile(){
+        flex-direction: column;
+        align-items: center;
+    }
+    .footerLogo{
+        width: vw(300);
+        padding: vw(20);
+        background-color: $secondary;
+        border-radius: vw(5);
+        @include mobile(){
+            width: vw(200, 414);
+            padding: vw(20, 414);
+            border-radius: vw(5, 414);
+        }
+        img{
+            margin: 0 auto vw(20);
+            @include mobile(){
+                margin-bottom: vw(20, 414);
+            }
+        }
+        h5{
+            font-size: $fs_24;
+            font-weight: $fw_bold;
+            color: $primary;
+            margin-bottom: vw(30);
+            @include mobile(){
+                font-size: vw(14, 414);
+                margin-bottom: vw(20, 414);
+            }
+        }
+        p{
+            font-size: $fs_24;
+            font-weight: $fw_medium;
+            color: $primary;
+        }
+    }
+    .footerNavigation{
+        .footerNav{
+            display: flex;
+            gap: vw(130);
+            align-items: flex-start;
+            .Nav{
+                display: flex;
+                flex-direction: column;
+                .heading{
+                    font-size: $fs_30 !important;
+                    text-align: left;
+                    color: $white !important;
+                    &::after{
+                        left: vw(55);
+                        top: vw(60);
+                        width: vw(100);
+                    }
+                }
+                a{
+                    font-size: $fs_24;
+                    color: $white;
+                    text-decoration: underline;
+                    margin-bottom: vw(10);
+                    transition: all 0.3s ease-in;
+                    opacity: .9;
+                    &:hover{
+                        opacity: 1;
+                        text-decoration: none;
+                        scale: (1.1);
+                    }
+                }
+                .navCall, .navMail{
+                    display: flex;
+                    align-items: center;
+                    gap: vw(20);
+                    margin-bottom: vw(20);
+                    a{
+                        display: block;
+                        margin-bottom: vw(1);
+                        text-decoration: none !important;
+                    }
+                    svg{
+                        width: vw(30);
+                        height: vw(30);
+                    }
+                }
+            }
+        }
+        p{
+            font-size: $fs_24;
+            color: $white;
+            opacity: .9;
+            font-weight: $fw_thin;
         }
     }
 }

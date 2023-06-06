@@ -13,10 +13,7 @@
      }
     });
 
-    $(".menu").click(function(){
-      $(".mobNav").toggle(1000);
-    });
-
+    
     $(".slickSlider").on("afterChange", function (event, slick, currentSlide, nextSlide) {
       if (currentSlide === 0) {
         $('.testimonial .slick-prev').css('opacity', '0.3');
