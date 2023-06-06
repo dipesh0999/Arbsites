@@ -454,6 +454,7 @@ header{
     @include mobile(){
         flex-direction: column;
         align-items: center;
+        padding: vw(25, 414) vw(50, 414);
     }
     .footerLogo{
         width: vw(300);
@@ -466,8 +467,10 @@ header{
             border-radius: vw(5, 414);
         }
         img{
+            width: vw(117);
             margin: 0 auto vw(20);
             @include mobile(){
+                width: vw(80, 414);
                 margin-bottom: vw(20, 414);
             }
         }
@@ -479,12 +482,17 @@ header{
             @include mobile(){
                 font-size: vw(14, 414);
                 margin-bottom: vw(20, 414);
+                text-align: center;
             }
         }
         p{
             font-size: $fs_24;
             font-weight: $fw_medium;
             color: $primary;
+            @include mobile(){
+                font-size: vw(14, 414);
+                text-align: center;
+            }
         }
     }
     .footerNavigation{
@@ -492,6 +500,12 @@ header{
             display: flex;
             gap: vw(130);
             align-items: flex-start;
+            @include mobile(){
+                flex-wrap: wrap;
+                gap: vw(70, 414);
+                justify-content: space-between;
+                margin-bottom: vw(15, 414);
+            }
             .Nav{
                 display: flex;
                 flex-direction: column;
@@ -499,10 +513,19 @@ header{
                     font-size: $fs_30 !important;
                     text-align: left;
                     color: $white !important;
+                    @include mobile(){
+                        font-size: vw(16, 414) !important;
+                        margin-bottom: vw(30, 414) !important;
+                    }
                     &::after{
                         left: vw(55);
                         top: vw(60);
                         width: vw(100);
+                        @include mobile(){
+                            left: vw(20, 414);
+                            top: vw(26, 414);
+                            width: vw(35, 414) !important;
+                        }
                     }
                 }
                 a{
@@ -516,6 +539,10 @@ header{
                         opacity: 1;
                         text-decoration: none;
                         scale: (1.1);
+                    }
+                    @include mobile(){
+                        font-size: vw(14, 414);
+                        margin-bottom: vw(5, 414);
                     }
                 }
                 .navCall, .navMail{
@@ -540,6 +567,10 @@ header{
             color: $white;
             opacity: .9;
             font-weight: $fw_thin;
+            @include mobile(){
+                font-size: vw(12, 414);
+                text-align: center;
+            }
         }
     }
 }
