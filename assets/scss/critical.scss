@@ -120,7 +120,7 @@ header{
                 &:hover{
                     .sub{
                         opacity: 1;
-                        z-index: 99;
+                        z-index: 1;
                         top:vw(50);
                     }
                 }
@@ -160,7 +160,7 @@ header{
                 &:hover{
                     .sub{
                         opacity: 1;
-                        z-index: 99;
+                        z-index: 1;
                         top:vw(50);
                     }
                 }
@@ -276,7 +276,7 @@ header{
 // BANNER
 .banner{
     position: relative;
-    margin-bottom: vw(195);
+    margin-bottom: vw(50);
     picture{
         img{
             width: 100%;
@@ -396,6 +396,7 @@ header{
         @include mobile(){
             padding: vw(30, 414) vw(20, 414);
             flex-direction: column;
+            width: 80vw;
         }
         h1{
             color: $white !important;

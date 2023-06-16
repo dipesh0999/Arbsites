@@ -36,21 +36,49 @@
                     margin-bottom: vw(10, 414);
                 }
             }
-            &:hover{
-                .star1{
-                    border-radius: vw(76) vw(130) vw(57) vw(100);
-                }
-            }
             .star1{
-                border-radius: vw(130) vw(76) vw(100) vw(57);
+                border-radius: 66% 34% 33% 67% / 60% 48% 52% 40%;
                 transition: all .5s ease-in;
-                @include mobile(){
-                    border-radius: vw(130, 414) vw(76, 414) vw(100, 414) vw(57, 414);
-                }
             }
             .light1{
-                border-radius: vw(100) vw(70) vw(200) vw(157);
+                border-radius: 47% 53% 49% 51% / 40% 29% 71% 60%;
                 transition: all .5s ease-in;
+            }
+            .moon1{
+                border-radius: 47% 53% 22% 78% / 39% 42% 58% 61%;
+                transition: all .5s ease-in;
+            }
+            .star2{
+                border-radius: 26% 74% 49% 51% / 55% 50% 50% 45%;
+                transition: all .5s ease-in;
+            }
+            .light2{
+                border-radius: 53% 47% 50% 50% / 67% 50% 50% 33%;
+                transition: all .5s ease-in;
+            }
+            .moon2{
+                border-radius: 41% 59% 61% 39% / 47% 37% 63% 53%;
+                transition: all .5s ease-in;
+            }
+            &:hover{
+                .star1{
+                    border-radius: 29% 71% 71% 29% / 65% 45% 55% 35%;
+                }
+                .light1{
+                    border-radius: 49% 51% 49% 51% / 58% 55% 45% 42%;
+                }
+                .moon1{
+                    border-radius: 30% 70% 49% 51% / 62% 57% 43% 38%;
+                }
+                .star2{
+                    border-radius: 71% 29% 37% 63% / 55% 50% 50% 45%;
+                }
+                .light2{
+                    border-radius: 34% 66% 71% 29% / 35% 53% 47% 65%;
+                }
+                .moon2{
+                    border-radius: 34% 66% 61% 39% / 58% 68% 32% 42% ;
+                }
             }
             h3{
                 font-size: $fs_30;
