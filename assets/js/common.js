@@ -14,7 +14,7 @@
     });
 
     $(".mobMenu .menu").click(function(e){
-      $(".mobNav").toggleClass("mobOpen")
+      $(".mobNav").toggleClass('mobOpen');
      });
 
     
