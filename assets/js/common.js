@@ -13,6 +13,10 @@
      }
     });
 
+    $(".mobMenu .menu").click(function(e){
+      $(".mobNav").toggleClass("mobOpen")
+     });
+
     
     $(".slickSlider").on("afterChange", function (event, slick, currentSlide, nextSlide) {
       if (currentSlide === 0) {

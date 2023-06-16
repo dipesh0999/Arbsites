@@ -218,10 +218,11 @@ header{
                     position: absolute;
                     width: 100vw;
                     background: white;
-                    padding: 14px;
-                    right: -44px;
-                    top: 48px;
-                    display: none;
+                    padding: vw(14, 414);
+                    right: vw(-45, 414);
+                    top: vw(-500, 414);
+                    z-index: -1;
+                    transition: all 0.3s ease-in;
                     ul{
                         li{
                             margin-bottom: vw(10, 414);
@@ -245,6 +246,10 @@ header{
                             display: block;
                         }
                     }
+                }
+                .mobOpen{
+                    top: vw(48, 414) !important;
+                    transition: all 0.3s ease-in;
                 }
             }
         }
@@ -502,7 +507,7 @@ header{
             align-items: flex-start;
             @include mobile(){
                 flex-wrap: wrap;
-                gap: vw(70, 414);
+                gap: vw(40, 414);
                 justify-content: space-between;
                 margin-bottom: vw(15, 414);
             }
@@ -550,6 +555,10 @@ header{
                     align-items: center;
                     gap: vw(20);
                     margin-bottom: vw(20);
+                    @include mobile(){
+                        gap:vw(10, 414);
+                        justify-content: space-around;
+                    }
                     a{
                         display: block;
                         margin-bottom: vw(1);
@@ -558,6 +567,10 @@ header{
                     svg{
                         width: vw(30);
                         height: vw(30);
+                        @include mobile(){
+                            width: vw(15, 414);
+                            height: vw(15, 414);
+                        }
                     }
                 }
             }
