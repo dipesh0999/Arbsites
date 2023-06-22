@@ -214,39 +214,39 @@ header{
                     background-color: $primary_light;
                     color: $secondary;
                 }
-                .mobNav{
-                    position: absolute;
-                    width: 100vw;
-                    background: white;
-                    padding: vw(14, 414);
-                    right: vw(-45, 414);
-                    top: vw(-500, 414);
-                    z-index: -1;
-                    transition: all 0.3s ease-in;
-                    ul{
-                        li{
-                            margin-bottom: vw(10, 414);
-                            a{
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                font-size: vw(16, 414);
-                                color: $blue_light;
-                            }
-                            .navFlexMob{
-                                svg{
-                                    transform: rotate(180deg);
-                                }
-                            }
-                        }
-                        .sub{
-                            display: none;
-                        }
-                        .subOpen{
-                            display: block;
-                        }
-                    }
-                }
+                // .mobNav{
+                //     position: absolute;
+                //     width: 100vw;
+                //     background: white;
+                //     padding: vw(14, 414);
+                //     right: vw(-45, 414);
+                //     top: vw(-500, 414);
+                //     z-index: -1;
+                //     transition: all 0.3s ease-in;
+                //     ul{
+                //         li{
+                //             margin-bottom: vw(10, 414);
+                //             a{
+                //                 display: flex;
+                //                 justify-content: space-between;
+                //                 align-items: center;
+                //                 font-size: vw(16, 414);
+                //                 color: $blue_light;
+                //             }
+                //             .navFlexMob{
+                //                 svg{
+                //                     transform: rotate(180deg);
+                //                 }
+                //             }
+                //         }
+                //         .sub{
+                //             display: none;
+                //         }
+                //         .subOpen{
+                //             display: block;
+                //         }
+                //     }
+                // }
                 .mobOpen{
                     top: vw(48, 414) !important;
                     transition: all 0.3s ease-in;
