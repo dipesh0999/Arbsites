@@ -79,12 +79,41 @@ header{
                 }
             }
         }
+        .bgList{
+            @include mobile(){
+                width: vw(120, 414) !important;
+                a{
+                    justify-content: space-around !important;
+                }
+            }
+        }
+        .svgArrow{
+            display: none;
+            @include mobile(){
+                display: block;
+            }
+        }
         .navBttns{
             display: flex;
             align-items: center;
             gap: vw(128);
             @include mobile(){
-                display: none;
+                justify-content: space-between;
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                width: 100%;
+                background: white;
+                top: vw(-500, 414);
+                z-index: -1;
+                padding: vw(20, 414);
+                gap:vw(20, 414);
+                transition: all 0.5s ease-in;
+            }
+            li{
+                @include mobile(){
+                    width: 100%;
+                }
             }
             a{
                 font-size: $fs_24;
@@ -94,11 +123,20 @@ header{
                 &:hover{
                     color: $secondary;
                 }
+                @include mobile(){
+                    font-size: vw(16, 414);
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
             }
             .navFlex{
                 display: flex;
                 align-items: center;
                 gap: vw(10);
+                @include mobile(){
+                    justify-content: space-between;
+                }
                 svg{
                     transition: all 0.3s ease-in;
                     path{
@@ -114,9 +152,36 @@ header{
                     }
                 }
             }
+            .sub{
+                position: absolute;  
+                text-align: center;
+                background-color: $white;
+                padding: vw(20) vw(30);
+                opacity: 0;
+                transition: all 0.3s ease-in;
+                z-index: -999;
+                @include mobile(){
+                    position: relative;
+                    display: none;
+                    top: auto !important;
+                    right: auto !important;
+                    opacity: 1;
+                    transition: none;
+                    padding: vw(10, 414) vw(20, 414);
+                    a{
+                        padding: vw(10, 414) 0 !important;
+                        display: flex !important;
+                        justify-content: space-between !important;
+                        align-items: center !important;
+                    }
+                }
+            }
             .navFlex1{
                 position: relative;
                 transition: all 0.5s ease-in;
+                @include mobile(){
+                    width: 100%;
+                }
                 &:hover{
                     .sub{
                         opacity: 1;
@@ -125,17 +190,13 @@ header{
                     }
                 }
                 .sub{
-                    position: absolute;
                     top:vw(-500);
                     right:vw(-52);
-                    text-align: center;
-                    background-color: $white;
-                    padding: vw(20) vw(30);
-                    opacity: 0;
-                    transition: all 0.3s ease-in;
-                    z-index: -999;
                     li{
                         width: vw(170);
+                        @include mobile(){
+                            width: 100%;
+                        }
                         &:nth-child(1){
                             a{
                                 border-top: none;
@@ -154,9 +215,17 @@ header{
                     }
                 }
             }
+            .activeSubmenu{
+                & + .sub{
+                    display: block !important;
+                }
+            }
             .navFlex2{
                 position: relative;
                 transition: all 0.5s ease-in;
+                @include mobile(){
+                    width: 100%;
+                }
                 &:hover{
                     .sub{
                         opacity: 1;
@@ -165,17 +234,13 @@ header{
                     }
                 }
                 .sub{
-                    position: absolute;
                     top:vw(-500);
                     right:vw(-105);
-                    text-align: center;
-                    background-color: $white;
-                    padding: vw(20) vw(30);
-                    opacity: 0;
-                    transition: all 0.6s ease-in;
-                    z-index: -999;
                     li{
                         width: vw(220);
+                        @include mobile(){
+                            width: 100%;
+                        }
                         &:nth-child(1){
                             a{
                                 border-top: none;
@@ -193,7 +258,9 @@ header{
                 }
             }
         }
-
+        .mobOpen{
+            top: vw(48, 414) !important;
+        }
         .mobMenu{
             display: none;
             @include mobile(){
@@ -247,10 +314,7 @@ header{
                 //         }
                 //     }
                 // }
-                .mobOpen{
-                    top: vw(48, 414) !important;
-                    transition: all 0.3s ease-in;
-                }
+                
             }
         }
     }
@@ -587,4 +651,9 @@ header{
             }
         }
     }
+}
+
+#popUp{
+    position: absolute;
+    z-index: 99999;
 }

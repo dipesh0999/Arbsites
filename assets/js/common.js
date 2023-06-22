@@ -14,8 +14,15 @@
     });
 
     $(".mobMenu .menu").click(function(e){
-      $(".mobNav").toggleClass('mobOpen');
+      $(".navBttns").toggleClass('mobOpen');
      });
+
+    $(".navFlex").click(function(e){
+      e.preventDefault();
+      $(".navFlex").removeClass("activeSubmenu")
+      $(this).toggleClass ("activeSubmenu")
+    });
+
 
     
     $(".slickSlider").on("afterChange", function (event, slick, currentSlide, nextSlide) {
