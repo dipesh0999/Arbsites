@@ -17,10 +17,16 @@
       $(".navBttns").toggleClass('mobOpen');
      });
 
-    $(".navFlex").click(function(e){
+    $(".navFlex1 .navFlex").click(function(e){
       e.preventDefault();
-      $(".navFlex").removeClass("activeSubmenu")
-      $(this).toggleClass ("activeSubmenu")
+      $(this).toggleClass("activeSubmenu")
+      $(".navFlex2 .navFlex").removeClass("activeSubmenu");
+    });
+
+    $(".navFlex2 .navFlex").click(function(e){
+      e.preventDefault();
+      $(this).toggleClass("activeSubmenu")
+      $(".navFlex1 .navFlex").removeClass("activeSubmenu");
     });
 
 
