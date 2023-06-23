@@ -653,7 +653,47 @@ header{
     }
 }
 
-#popUp{
-    position: absolute;
-    z-index: 99999;
-}
+// #popUp{
+//     position: fixed;
+//     z-index: 99999;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%);
+//     background-color: $primary_light_80;
+//     padding: vw(20) vw(40);
+//     .closeBtn{
+//         position: absolute;
+//         right: vw(10);
+//         top: vw(10);
+//         cursor: pointer;
+//     }
+//     h3{
+//         font-size: vw(22);
+//         color: $white;
+//         margin-bottom: vw(20);
+//     }
+//     .input-field{
+//         width: vw(500);
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         flex-wrap: wrap;
+//         gap: vw(10);
+//         input{
+//             border: none;
+//             outline: none;
+//             border-bottom: 1px solid $white;
+//             padding-bottom: vw(10);
+//             background: transparent;
+//             color: $secondary;
+//             &::placeholder{
+//                 color: $secondary;
+//             }
+//             &::-moz-focus-inner{
+//                 color: white;
+//             }
+//         }
+//         .input-box{
+//         }
+//     }
+// }
