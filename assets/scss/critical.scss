@@ -169,7 +169,7 @@ header{
                 background-color: $white;
                 padding: vw(20) vw(30);
                 opacity: 0;
-                transition: all 0.3s ease-in;
+                transition: all 0.5s ease-in;
                 z-index: -999;
                 @include mobile(){
                     position: relative;
@@ -189,7 +189,7 @@ header{
             }
             .navFlex1{
                 position: relative;
-                transition: all 0.5s ease-in;
+                transition: all 0.8s ease-in;
                 @include mobile(){
                     width: 100%;
                 }

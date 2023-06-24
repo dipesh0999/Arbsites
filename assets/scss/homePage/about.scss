@@ -38,34 +38,40 @@
                 }
             }
         }
-        .slider-img{
+        .about-slider{
             position: relative;
-            img{
+            .slider-img{
                 width: vw(511.5);
                 @include mobile(){
+                    width: vw(350, 414);
+                }
+                img{
+                    transition: opacity 500ms linear 0s;
                     width: 100%;
                 }
-            }
-            &:nth-child(1){
-                margin-top:vw(0);
-                z-index: 9;
-                top: vw(30);
-                left: vw(-30);
-                @include mobile(){
-                    top: auto;
-                    left: auto;
+                &:nth-child(1){
+                    margin-top:vw(0);
+                    top: vw(30);
+                    left: vw(-30);
+                    @include mobile(){
+                        top: auto;
+                        left: auto;
+                    }
+                }
+                &:nth-child(2){
+                    margin-top:vw(-257);
+                }
+                &:nth-child(3){
+                    margin-top:vw(-257);
                 }
             }
-            &:nth-child(2){
-                margin-top:vw(-257);
-            }
-            &:nth-child(3){
-                margin-top:vw(-257);
-            }
+
             .imgCont{
                 width: vw(466.5);
-                margin-left: vw(20);
                 position: absolute;
+                left: 45%;
+                top: vw(375);
+                transform: translate(-50%);
                 z-index: 1;
                 display: flex;
                 justify-content: center;
@@ -74,30 +80,34 @@
                 text-align: center;
                 color: $white;
                 gap: vw(15);
+                .prevArrow{
+                    opacity: 0.5;
+                }
                 svg{
-                    width: vw(61.5);
+                    width: vw(80);
                     cursor: pointer;
                     &:nth-child(1){
                         transform: rotate(180deg);
                     }
                     @include mobile(){
-                        width: vw(25, 414);
+                        width: vw(40, 414);
                     }
                 }
                 @include mobile(){
                     width: vw(250, 414);
-                    margin-left: vw(40, 414);
+                    left: 50%;
+                    transform: translate(-50%);
+                    top: vw(215, 414);
+                    gap: vw(15, 414);
                 }
                 p{
                     font-size: $fs_24;
                     font-weight: $fw_regular;
                     @include mobile(){
-                        font-size: vw(12, 414);
+                        font-size: vw(14, 414);
                     }
                 }
             }
-        }
-        .slickSlider{
         }
     }
 }

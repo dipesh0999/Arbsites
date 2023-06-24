@@ -30,6 +30,63 @@
     });
 
 
+    $(".about-slider .slickSlider").on("afterChange", function (event, slick, currentSlide, nextSlide) {
+      if (currentSlide === 0) {
+        $('.about-slider .prevArrow').css('opacity', '0.5');
+      }
+      if (currentSlide === 1) {
+        $('.about-slider .prevArrow').css('opacity', '1');
+      }
+    });
+
+    $(".about-slider .slickSlider").on("afterChange", function (event, slick, currentSlide, nextSlide) {
+      if (currentSlide === 1) {
+        $('.about-slider .nextArrow').css('opacity', '1');
+      }
+      if (currentSlide === 2) {
+        $('.about-slider .nextArrow').css('opacity', '0.5');
+      }
+    });
+
+    $('.about-slider .slickSlider').slick({
+      dots: false,
+      infinite: false,
+      speed: 1000,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      cssEase: 'linear',
+      prevArrow: $('.prevArrow'),
+      nextArrow: $('.nextArrow'),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+
     
     $(".slickSlider").on("afterChange", function (event, slick, currentSlide, nextSlide) {
       if (currentSlide === 0) {
