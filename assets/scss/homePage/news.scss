@@ -33,7 +33,7 @@
             font-weight: $fw_medium;
             margin-bottom: vw(20);
             @include mobile(){
-                font-size: vw(16, 414);
+                font-size: vw(22, 414);
                 margin-bottom: vw(10, 414);
             }
         }
@@ -42,14 +42,14 @@
             font-weight: $fw_regular;
             margin-bottom: vw(20);
             @include mobile(){
-                font-size: vw(14, 414);
+                font-size: vw(18, 414);
                 margin-bottom: vw(10, 414);
             }
         }
         .viewLink{
             font-size: $fs_24 !important;
             @include mobile(){
-                font-size: vw(12, 414) !important;
+                font-size: vw(18, 414) !important;
                 margin-bottom: vw(20, 414);
             }
         }

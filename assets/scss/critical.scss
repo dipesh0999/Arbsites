@@ -65,8 +65,8 @@ header{
                 gap: vw(15);
                 transition: all .3s ease-in;
                 @include mobile(){
-                    font-size: vw(16, 414);
-                    gap: vw(40, 414);
+                    font-size: vw(20, 414);
+                    gap: vw(20, 414);
                 }
                 &:hover{
                     color: $secondary;
@@ -285,13 +285,12 @@ header{
                 display: block;
                 position: relative;
                 .menu{
-                    width: vw(70, 414);
-                    height: vw(35, 414);
+                    width: vw(80, 414);
                     cursor: pointer;
                     background-color: $secondary;
                     padding: vw(5,414) vw(10,414);
                     color: $primary;
-                    font-size: vw(16, 414);
+                    font-size: vw(20, 414);
                     border-radius: vw(3, 414);
                     text-align: center;
                 }
@@ -317,7 +316,7 @@ header{
     @include mobile(){
         padding: vw(5, 414) vw(10, 414);
         border-radius: vw(2, 414);
-        font-size: vw(16, 414);
+        font-size: vw(20, 414);
     }
 }
 
@@ -347,7 +346,7 @@ header{
         transition: all .3s ease-in;
         @include mobile(){
             width: 90vw;
-            padding: vw(20, 414) vw(40, 414);
+            padding: vw(50, 414) vw(40, 414);
         }
         h2{
             font-size: $fs_60;
@@ -358,7 +357,7 @@ header{
                 color: $secondary;
             }
             @include mobile(){
-                font-size: vw(22, 414);
+                font-size: vw(30, 414);
                 margin-bottom: vw(20, 414);
             }
         }
@@ -377,7 +376,6 @@ header{
         a{
             transition: all .3s ease-in;
             @include mobile(){
-                font-size: vw(14, 414);
                 padding: vw(5, 414) vw(10, 414);
             }
         }
@@ -462,7 +460,7 @@ header{
             color: white;
             font-weight: $fw_medium;
             @include mobile(){
-                font-size: vw(16, 414);
+                font-size: vw(18, 414);
             }
         }
         .content{
@@ -479,7 +477,7 @@ header{
                     color: $white;
                     font-weight: $fw_bold;
                     @include mobile(){
-                        font-size: vw(12, 414);
+                        font-size: vw(18, 414);
                     }
                 }
                 svg{
@@ -490,8 +488,8 @@ header{
                         opacity: 0.7;
                     }
                     @include mobile(){
-                        width: vw(20, 414);
-                        height: vw(20, 414);
+                        width: vw(30, 414);
+                        height: vw(30, 414);
                     }
                 }
             }
@@ -508,7 +506,7 @@ header{
     @include mobile(){
         flex-direction: column;
         align-items: center;
-        padding: vw(25, 414) vw(50, 414);
+        padding: vw(25, 414);
     }
     .footerLogo{
         width: vw(300);
@@ -516,7 +514,7 @@ header{
         background-color: $secondary;
         border-radius: vw(5);
         @include mobile(){
-            width: vw(200, 414);
+            width: vw(250, 414);
             padding: vw(20, 414);
             border-radius: vw(5, 414);
         }
@@ -534,7 +532,7 @@ header{
             color: $primary;
             margin-bottom: vw(30);
             @include mobile(){
-                font-size: vw(14, 414);
+                font-size: vw(20, 414);
                 margin-bottom: vw(20, 414);
                 text-align: center;
             }
@@ -544,7 +542,7 @@ header{
             font-weight: $fw_medium;
             color: $primary;
             @include mobile(){
-                font-size: vw(14, 414);
+                font-size: vw(18, 414);
                 text-align: center;
             }
         }
@@ -556,9 +554,9 @@ header{
             align-items: flex-start;
             @include mobile(){
                 flex-wrap: wrap;
-                gap: vw(40, 414);
+                gap: vw(25, 414);
                 justify-content: space-between;
-                margin-bottom: vw(15, 414);
+                margin-bottom: vw(25, 414);
             }
             .Nav{
                 display: flex;
@@ -568,7 +566,7 @@ header{
                     text-align: left;
                     color: $white !important;
                     @include mobile(){
-                        font-size: vw(16, 414) !important;
+                        font-size: vw(20, 414) !important;
                         margin-bottom: vw(30, 414) !important;
                     }
                     &::after{
@@ -579,6 +577,7 @@ header{
                             left: vw(20, 414);
                             top: vw(26, 414);
                             width: vw(35, 414) !important;
+                            height: vw(1, 414);
                         }
                     }
                 }
@@ -595,7 +594,7 @@ header{
                         scale: (1.1);
                     }
                     @include mobile(){
-                        font-size: vw(14, 414);
+                        font-size: vw(18, 414);
                         margin-bottom: vw(5, 414);
                     }
                 }
@@ -617,8 +616,8 @@ header{
                         width: vw(30);
                         height: vw(30);
                         @include mobile(){
-                            width: vw(15, 414);
-                            height: vw(15, 414);
+                            width: vw(20, 414);
+                            height: vw(20, 414);
                         }
                     }
                 }
@@ -630,7 +629,7 @@ header{
             opacity: .9;
             font-weight: $fw_thin;
             @include mobile(){
-                font-size: vw(12, 414);
+                font-size: vw(18, 414);
                 text-align: center;
             }
         }

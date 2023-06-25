@@ -39,16 +39,16 @@
                     font-size: vw(22);
                     font-weight: $fw_medium;
                     @include mobile(){
-                        font-size: vw(18, 414);
+                        font-size: vw(24, 414);
                         bottom: vw(10, 414);
                     }
                 }
             }
             p{
                 @include mobile(){
-                    width: 60vw;
+                    width: 70vw;
                     margin: 0 auto;
-                    font-size: vw(18, 414) !important;
+                    font-size: vw(22, 414) !important;
                 }
             }
         }

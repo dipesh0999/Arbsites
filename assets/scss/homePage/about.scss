@@ -19,7 +19,7 @@
                 font-size: $fs_30;
                 color: $blue_light;
                 @include mobile(){
-                    font-size:vw(16, 414);
+                    font-size:vw(18, 414);
                     margin-bottom: vw(30, 414);
                 }
                 &::after{
@@ -32,7 +32,7 @@
                     left: vw(0);
                     @include mobile(){
                         width: vw(100, 414);
-                        top:vw(108, 414);
+                        top:vw(145, 414);
                         left: vw(1, 414);
                     }
                 }

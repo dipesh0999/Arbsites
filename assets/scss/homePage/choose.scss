@@ -21,7 +21,7 @@
             font-weight: $fw_medium;
             margin-bottom: vw(75);
             @include mobile(){
-                font-size: vw(16, 414);
+                font-size: vw(20, 414);
                 margin-bottom: vw(50, 414);
             }
         }
