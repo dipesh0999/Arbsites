@@ -42,7 +42,7 @@ ul{
     margin-bottom: vw(78);
     position: relative;
     @include mobile(){
-        font-size: vw(24, 414);
+        font-size: vw(28, 414);
         margin-bottom: vw(50, 414);
     }
     &::after{
