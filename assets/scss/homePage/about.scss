@@ -100,13 +100,6 @@
                     top: vw(215, 414);
                     gap: vw(15, 414);
                 }
-                p{
-                    font-size: $fs_24;
-                    font-weight: $fw_regular;
-                    @include mobile(){
-                        font-size: vw(14, 414);
-                    }
-                }
             }
         }
     }

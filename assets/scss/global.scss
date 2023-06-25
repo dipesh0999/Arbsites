@@ -83,7 +83,7 @@ ul{
     color: $blue_light;
     margin-bottom: vw(25);
     @include mobile(){
-        font-size: vw(16, 414);
+        font-size: vw(18, 414);
     }
 }
 .viewLink{

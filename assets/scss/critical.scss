@@ -348,7 +348,7 @@ header{
             width: 90vw;
             padding: vw(50, 414) vw(40, 414);
         }
-        h2{
+        h1{
             font-size: $fs_60;
             font-weight: $fw_bold;
             color: $white;
@@ -363,7 +363,7 @@ header{
         }
         &:hover{
             background-color: $secondary_80;
-            h2{
+            h1{
                 span{
                     color: $primary_light;
                 }
@@ -421,6 +421,101 @@ header{
         }
     }
 }
+
+.innerBanner{
+    padding-top: 100px;
+    picture{
+        img{
+            height: auto !important;
+        }
+    }
+    .innerBanner-content{
+        width: 50vw !important;
+        padding: vw(10) vw(80) !important;
+        top: vw(250) !important;
+    }
+}++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Footer
