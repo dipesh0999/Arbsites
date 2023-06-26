@@ -423,7 +423,10 @@ header{
 }
 
 .innerBanner{
-    padding-top: 100px;
+    padding-top: vw(100);
+    @include mobile(){
+        padding-top: vw(85, 414);
+    }
     picture{
         img{
             height: auto !important;
@@ -433,89 +436,16 @@ header{
         width: 50vw !important;
         padding: vw(10) vw(80) !important;
         top: vw(250) !important;
+        @include mobile(){
+            width: 80vw !important;
+            top: vw(500, 414) !important;
+            padding: vw(10, 414) vw(80, 414) !important;
+        }
+        h1{
+            margin-bottom: 0;
+        }
     }
-}++
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 //Footer
@@ -539,7 +469,7 @@ header{
             flex-direction: column;
             width: 80vw;
         }
-        h1{
+        h2{
             color: $white !important;
             text-align: left;
             &::after{

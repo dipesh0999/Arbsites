@@ -1,0 +1,93 @@
+.about-us{
+    background-color: $white_medium;
+    .aboutContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include mobile(){
+            flex-direction: column;
+        }
+        .leftContainer{
+            width: vw(700);
+            @include mobile(){
+                width: 100%;
+            }
+        }
+        .about-slider{
+            .bgTree{
+                height: auto;
+            }
+            .slider-img{        
+                video{
+                    margin-top: vw(-230);
+                    margin-left: vw(-60);
+                    border-radius: 15px;
+                    width: vw(511);
+                    height: auto;
+                    cursor: pointer;
+                    @include mobile(){
+                        width: 100%;
+                        margin-top: vw(-200, 414);
+                    }
+                }
+            }
+        }
+    }
+    .arbMaP{
+        width: 100%;
+        a{
+            color: $secondary;
+            text-decoration: underline;
+            font-size: vw(24);
+            margin-bottom: vw(28);
+            display: inline-block;
+            @include mobile(){
+                font-size: vw(16, 414);
+                margin: vw(14, 414) 0;
+
+            }
+        }
+        .g-map{
+            border-radius: 5px;
+            box-shadow: 0px 0px 9px 0px rgba(174, 174, 174, 0.10);
+            iframe{
+                width: 100%;
+            }
+            .mapContent{
+                svg{
+                    width: 5%;
+                    @include mobile(){
+                        width: 50%;
+                    }
+                }
+                background-color: $white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: vw(25) vw(80);
+                gap: vw(50);
+                margin-top: vw(-8);
+                @include mobile(){
+                    padding: vw(15, 414) vw(25, 414);
+                }
+                .mapAddress{
+                    font-size: vw(24);
+                    color: $blue_light;
+                    font-weight: $fw_medium;
+                    @include mobile(){
+                        font-size: vw(16, 414);
+                    }
+                    span{
+                        border-right: 2px solid $secondary;
+                        padding-right: vw(10);
+                        margin-right: vw(10);
+                        @include mobile(){
+                            padding-right: vw(10, 414);
+                            margin-right: vw(10, 414);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
