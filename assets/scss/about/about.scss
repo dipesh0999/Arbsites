@@ -35,18 +35,6 @@
     }
     .arbMaP{
         width: 100%;
-        a{
-            color: $secondary;
-            text-decoration: underline;
-            font-size: vw(24);
-            margin-bottom: vw(28);
-            display: inline-block;
-            @include mobile(){
-                font-size: vw(16, 414);
-                margin: vw(14, 414) 0;
-
-            }
-        }
         .g-map{
             border-radius: 5px;
             box-shadow: 0px 0px 9px 0px rgba(174, 174, 174, 0.10);
@@ -89,5 +77,16 @@
                 }
             }
         }
+    }
+}
+.learnLink{
+    color: $secondary;
+    text-decoration: underline;
+    font-size: vw(24);
+    margin-bottom: vw(28);
+    display: inline-block;
+    @include mobile(){
+        font-size: vw(16, 414);
+        margin: vw(14, 414) 0;
     }
 }

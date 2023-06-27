@@ -54,6 +54,7 @@
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      lazyLoad: 'ondemand',
       cssEase: 'linear',
       prevArrow: $('.prevArrow'),
       nextArrow: $('.nextArrow'),
