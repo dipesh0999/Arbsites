@@ -424,6 +424,7 @@ header{
 
 .innerBanner{
     padding-top: vw(100);
+    margin-bottom: 0 !important;
     @include mobile(){
         padding-top: vw(85, 414);
     }

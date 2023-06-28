@@ -1,0 +1,19 @@
+.forces{
+    background-color: $white_medium;
+    .flexPara{
+        .learnLink{
+            display: inline !important;
+        }
+    }
+    .forcesIMG{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $white;
+        padding: vw(60) vw(100);
+        @include mobile(){
+            flex-direction: column;
+            padding: vw(20, 414) vw(40, 414);
+        }
+    }
+}
