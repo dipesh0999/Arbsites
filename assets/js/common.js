@@ -209,4 +209,14 @@
 
         oldScroll = wTop;
     }, { passive: true });
+
+
+    $(function(){
+      $(".accordionFlex").click(function(){
+        $("accordionPara").toggleClass("active");
+        if($("accordionPara").hasClass("active"))
+          $(".accordionFlex").not("accordionPara").removeClass("active");
+      })
+    })
+
 }.call(window, window.jQuery);

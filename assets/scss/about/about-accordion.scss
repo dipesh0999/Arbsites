@@ -1,0 +1,35 @@
+.aboutAccordion{
+    background-color: $black_thin;
+    #aboutAccordion{
+        .item{
+            margin-bottom: vw(20);
+            .accordionFlex{
+                display: flex;
+                gap: vw(80);
+                align-items: center;
+                background-color: $white_medium;
+                padding: vw(10) vw(30);
+                position: relative;
+                font-size: vw(20);
+                border-radius: 5px;
+                cursor: pointer;
+                img{
+                    position: absolute;
+                    right: vw(40);
+                }
+            }
+            .accordionPara{
+                    background-color: $white;
+                    padding: vw(20) vw(50);
+                    border-top: 5px solid $secondary;
+                    border-radius: 0 0 5px 5px;
+                    display: none;
+            }
+        }
+        .active{
+            .accordionPara{
+                display: block;
+            }
+        }
+    }
+}
