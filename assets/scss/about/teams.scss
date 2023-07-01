@@ -41,8 +41,10 @@
                     }
                     &::after{
                         top:vw(55);
+                        width: vw(80);
                         @include mobile(){
                             top:vw(25, 414);
+                            width: vw(50, 414);
                         }
                     }
                 }
