@@ -18,7 +18,7 @@
                 background-color: $white_medium;
                 padding: vw(10) vw(30);
                 position: relative;
-                font-size: vw(20);
+                font-size: $fs_30;
                 border-radius: 5px;
                 cursor: pointer;
                 @include mobile(){
@@ -33,7 +33,7 @@
                     }
                 }
                 img{
-                    width: vw(26);
+                    width: vw(40);
                     transition: all 0.3s ease-in;
                     @include mobile(){
                         width: vw(20, 414);
@@ -46,7 +46,9 @@
                     border-top: 5px solid $secondary;
                     border-radius: 0 0 5px 5px;
                     display: none;
+                    font-size: $fs_24;
                     @include mobile(){
+                        font-size: vw(14, 414);
                         padding: vw(10, 414);
                     }
             }
