@@ -1,0 +1,59 @@
+.teams{
+    background: url('../images/webp/TreeBG3.webp');
+    padding: vw(50) vw(150);
+    .teamsContent{
+        background-color: $primary_light_80;
+        padding: vw(30) vw(50);
+        border-radius: 5px;
+        @include mobile(){
+            padding: vw(15, 414) vw(30, 414);
+        }
+        .heading{
+            color: $white;
+        }
+        .teamsFlex{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            .teamMember{
+                width: vw(400);
+                margin: 0 auto;
+                text-align: center;
+                padding: vw(10);
+                margin-bottom: vw(50);
+                @include mobile(){
+                    width: 100%;
+                    padding: vw(20, 414);
+                }
+                img{
+                    width:vw(320);
+                    margin: 0 auto vw(30);
+                    @include mobile(){
+                        width: 50vw;
+                    }
+                }
+                .heading{
+                    font-size: $fs_30;
+                    margin-bottom: vw(30);
+                    @include mobile(){
+                        font-size: vw(16, 414);
+                        margin-bottom: vw(15, 414);
+                    }
+                    &::after{
+                        top:vw(55);
+                        @include mobile(){
+                            top:vw(25, 414);
+                        }
+                    }
+                }
+                p{
+                    font-size: $fs_24;
+                    color: $white;
+                    @include mobile(){
+                        font-size: vw(14, 414);
+                    }
+                }
+            }
+        }
+    }
+}

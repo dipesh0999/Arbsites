@@ -1,11 +1,21 @@
 .aboutAccordion{
     background-color: $black_thin;
+    .heading{
+        &::after{
+            @include mobile(){
+                top: vw(90, 414);
+            }
+        }
+    }
     #aboutAccordion{
         .item{
             margin-bottom: vw(20);
+            @include mobile(){
+                margin-bottom: vw(15, 414);
+            }
             .accordionFlex{
                 display: flex;
-                gap: vw(80);
+                justify-content: space-between;
                 align-items: center;
                 background-color: $white_medium;
                 padding: vw(10) vw(30);
@@ -13,17 +23,34 @@
                 font-size: vw(20);
                 border-radius: 5px;
                 cursor: pointer;
+                @include mobile(){
+                    font-size: vw(16, 414);
+                    padding: vw(10, 414);
+                }
+                .accordionContent{
+                    display: flex;
+                    gap: vw(80);
+                    @include mobile(){
+                        gap: vw(10, 414);
+                    }
+                }
                 img{
-                    position: absolute;
-                    right: vw(40);
+                    width: vw(26);
+                    transition: all 0.3s ease-in;
+                    @include mobile(){
+                        width: vw(20, 414);
+                    }
                 }
             }
             .accordionPara{
                     background-color: $white;
-                    padding: vw(20) vw(50);
+                    padding: vw(20) vw(30);
                     border-top: 5px solid $secondary;
                     border-radius: 0 0 5px 5px;
                     display: none;
+                    @include mobile(){
+                        padding: vw(10, 414);
+                    }
             }
         }
         .active{
