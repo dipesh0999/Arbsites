@@ -1,10 +1,8 @@
 .aboutAccordion{
     background-color: $black_thin;
     .heading{
-        &::after{
-            @include mobile(){
-                top: vw(90, 414);
-            }
+        @include mobile(){
+            font-size: vw(24, 414);
         }
     }
     #aboutAccordion{
