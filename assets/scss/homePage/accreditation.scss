@@ -48,4 +48,69 @@
             }
         }
     }
+    .slick-dots{
+        li{
+            button{
+                font-size: vw(20);
+                @include mobile(){
+                    font-size: vw(20, 414);
+                }
+                &::before{
+                    color: black;
+                    font-size: vw(20);
+                    width: vw(21);
+                    @include mobile(){
+                        font-size: vw(20, 414);
+                        width: vw(20, 414);
+                    }
+                }
+            } 
+        }
+        .slick-active{
+            button{
+                font-size: vw(20);
+                @include mobile(){
+                    font-size: vw(20, 414);
+                }
+                &::before{
+                    color: white;
+                    font-size: vw(20);
+                    width: vw(21);
+                    @include mobile(){
+                        font-size: vw(20, 414);
+                        width: vw(20, 414);
+                    }
+                    opacity: 1;
+                }
+            }
+            border-radius: 50%;
+            &:nth-child(1){
+                background-color: #530083;
+            }
+            &:nth-child(2){
+                background-color: #006b3e;
+            }
+            &:nth-child(3){
+                background-color: #585858;
+            }
+            &:nth-child(4){
+                background-color: #d0daf0;
+            }
+            &:nth-child(5){
+                background-color: #6bb398;
+            }
+            &:nth-child(6){
+                background-color: #ff9230;
+            }
+            &:nth-child(7){
+                background-color: #b91526;
+            }
+            &:nth-child(8){
+                background-color: #243593;
+            }
+            &:nth-child(9){
+                background-color: #dac34b;
+            }
+        }
+    }
 }
