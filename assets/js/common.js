@@ -153,6 +153,7 @@
       slidesToShow: 5,
       slidesToScroll: 1,
       arrows: false,
+      cssEase: 'linear',
       responsive: [
         {
           breakpoint: 1024,
@@ -236,6 +237,7 @@ function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
     arrows: false,
     autoplay: true,
     infinite: true,
+    cssEase: 'linear',
     responsive: [
       {
         breakpoint: $breakpoint,
