@@ -111,8 +111,12 @@ header{
                 transition: all 0.5s ease-in;
             }
             li{
+                font-size: $fs_24;
+                font-weight: $fw_semibold;
+                color: $blue_light;
                 @include mobile(){
                     width: 100%;
+                    font-size: vw(16, 414);
                 }
             }
             a{

@@ -102,3 +102,28 @@ ul{
         border-bottom: 1px solid $primary_light;
     }
 }
+.navBttns{
+    .active{
+        color: $secondary !important;
+    }
+}
+.subHeading{
+    font-size: $fs_30;
+    font-weight: $fw_medium;
+    margin-bottom: vw(42);
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        width: vw(50);
+        height: vw(2);
+        background-color: $secondary;
+        left: 0;
+        bottom:vw(-20);
+        @include mobile(){
+            width: vw(80, 414);
+            height: vw(2, 414);
+            bottom:vw(-20, 414);
+        }
+    }
+}
