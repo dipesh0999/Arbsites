@@ -46,3 +46,45 @@
         }
     }
 }
+.prunningContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: vw(60);
+    .prunningDetail{
+        margin-bottom: vw(50);
+        font-size: $fs_24;
+        color: $blue_light;
+        .prunningPara{
+            width: vw(950);
+            margin-bottom: vw(60);
+        }
+        .prunningTitle{
+            margin-bottom: vw(120);
+            &:nth-child(1){
+                margin-top: vw(15);
+            }
+            &:nth-last-child(1){
+                margin-bottom: 0;
+            }
+        }
+        img{
+            width: vw(30);
+            margin-bottom: vw(140);
+            &:nth-child(1){
+                margin-top: vw(25);
+            }
+            &:nth-last-child(1){
+                margin-bottom: 0;
+                margin-top: vw(-5);
+            }
+        }
+        .borderNumber{
+            font-size: $fs_32;
+            margin-bottom: vw(106);
+            &:nth-child(1){
+                margin-top: vw(15);
+            }
+        }
+    }
+}
