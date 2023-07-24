@@ -141,6 +141,11 @@ header{
                 display: flex;
                 align-items: center;
                 gap: vw(10);
+                cursor: pointer;
+                transition: all 0.3s ease-in;
+                &:hover{
+                    color: $secondary;
+                }
                 @include mobile(){
                     justify-content: space-between;
                 }
