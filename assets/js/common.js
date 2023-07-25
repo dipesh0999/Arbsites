@@ -237,6 +237,7 @@ function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
     mobileFirst: true,
     dots: false,
     arrows: false,
+    speed:8000,
     autoplay: true,
     infinite: true,
     cssEase: 'linear',
