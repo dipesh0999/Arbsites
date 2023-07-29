@@ -164,20 +164,29 @@
             slidesToScroll: 3,
             infinite: true,
             dots: false,
+            autoplay: true,
+            cssEase: 'linear',
+            autoplaySpeed: 0,
           }
         },
         {
           breakpoint: 600,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToScroll: 2,
+            autoplay: true,
+            cssEase: 'linear',
+            autoplaySpeed: 0,
           }
         },
         {
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            autoplay: true,
+            cssEase: 'linear',
+            autoplaySpeed: 0,
           }
         }
         // You can unslick at a given breakpoint now by adding:
