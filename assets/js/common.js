@@ -160,8 +160,8 @@
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 3.5,
+            slidesToScroll: 1,
             infinite: true,
             dots: false,
             autoplay: true,
@@ -172,8 +172,8 @@
         {
           breakpoint: 600,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
+            slidesToShow: 2.5,
+            slidesToScroll: 1,
             autoplay: true,
             cssEase: 'linear',
             autoplaySpeed: 0,
@@ -182,7 +182,7 @@
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2.5,
             slidesToScroll: 1,
             autoplay: true,
             cssEase: 'linear',

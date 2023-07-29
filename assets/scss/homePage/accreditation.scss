@@ -28,6 +28,9 @@
         }
         img{
             margin: 0 vw(20);
+            @include mobile(){
+                margin: 0 vw(20, 414);
+            }
         }
     }
     .learnFlex{
