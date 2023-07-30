@@ -1,51 +1,66 @@
-.projects{
+.projects {
     background-color: $black_thin;
-    .projectFlex{
+
+    .projectFlex {
         display: flex;
         justify-content: space-around;
         align-items: center;
         margin-bottom: vw(70);
-        @include mobile(){
+
+        @include mobile() {
             flex-direction: column;
         }
-        .box{
+
+        .box {
             width: vw(300) !important;
             text-align: center;
             transition: all 0.3s ease-in;
-            &:hover{
+
+            &:hover {
                 scale: (1.1);
+                .viewLink {
+                    color: #00431D;
+                    border-bottom: 1px solid #00431D;
+                }
             }
-            @include mobile(){
+
+            @include mobile() {
                 margin-bottom: vw(50, 414);
                 width: 100% !important;
             }
-            .imgBox{
+
+            .imgBox {
                 width: 100%;
                 position: relative;
                 margin-bottom: vw(20);
-                @include mobile(){
+
+                @include mobile() {
                     margin-bottom: vw(20, 414);
                 }
-                img{
+
+                img {
                     margin: 0 auto;
                 }
-                h6{
+
+                h6 {
                     position: absolute;
-                    left:50%;
+                    left: 50%;
                     transform: translate(-50%);
                     bottom: vw(10);
                     width: 100%;
                     color: $white;
                     font-size: vw(22);
                     font-weight: $fw_medium;
-                    @include mobile(){
+
+                    @include mobile() {
                         font-size: vw(24, 414);
                         bottom: vw(10, 414);
                     }
                 }
             }
-            p{
-                @include mobile(){
+
+            p {
+                @include mobile() {
                     width: 70vw;
                     margin: 0 auto;
                     font-size: vw(22, 414) !important;
@@ -53,8 +68,9 @@
             }
         }
     }
-    .Help2{
-        @include mobile(){
+
+    .Help2 {
+        @include mobile() {
             flex-direction: column;
         }
     }
