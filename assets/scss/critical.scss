@@ -416,6 +416,7 @@ header{
         left: 50%;
         transform: translate(-50%);
         text-align: center;
+        cursor: pointer;
         @include mobile(){
             bottom: vw(105, 414);
             top: auto;
