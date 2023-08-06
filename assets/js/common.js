@@ -209,18 +209,7 @@
     //     $body.removeClass('menu-open');
     // });
 
-    document.addEventListener('scroll', e => {
-        var wTop = document.documentElement.scrollTop || document.body.scrollTop;
-
-        //up
-        if (wTop <= 0 || wTop < oldScroll) {
-            $body.removeClass('hideHeader');
-        } else {
-            $body.addClass('hideHeader');
-        }
-
-        oldScroll = wTop;
-    }, { passive: true });
+    
 
     $(".accordionFlex").click(function () {
       if ($('.accordionPara').is(':visible')) {
@@ -270,6 +259,19 @@ function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
     }
   });
 } // Mobile Only Slider
+
+document.addEventListener('scroll', e => {
+  var wTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+  //up
+  if (wTop <= 0 || wTop < oldScroll) {
+      $body.removeClass('hideHeader');
+  } else {
+      $body.addClass('hideHeader');
+  }
+
+  oldScroll = wTop;
+}, { passive: true });
 
 
 }.call(window, window.jQuery);

@@ -327,6 +327,11 @@ header{
                 .active{
                     background-color: $primary_light;
                     color: $secondary;
+                    svg{
+                        path{
+                            stroke: #FBB03B !important;
+                        }
+                    }
                 }                
             }
         }

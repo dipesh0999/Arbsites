@@ -33,24 +33,6 @@
             }
         }
     }
-    .learnFlex{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap:vw(20);
-        @include mobile(){
-            gap:vw(15, 414);
-        }
-        span{
-            width: vw(100);
-            height: vw(3);
-            background-color: $secondary;
-            @include mobile(){
-                width: vw(50, 414);
-                height: vw(2, 414);
-            }
-        }
-    }
     .slick-dots{
         li{
             button{
@@ -114,6 +96,24 @@
             &:nth-child(9){
                 background-color: #dac34b;
             }
+        }
+    }
+}
+.learnFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:vw(20);
+    @include mobile(){
+        gap:vw(15, 414);
+    }
+    span{
+        width: vw(100);
+        height: vw(3);
+        background-color: $secondary;
+        @include mobile(){
+            width: vw(50, 414);
+            height: vw(2, 414);
         }
     }
 }

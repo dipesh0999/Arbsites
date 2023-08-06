@@ -1,3 +1,6 @@
 @function vw ($px, $resolution: 1920) {
 	@return $px / $resolution * 100 * 1vw;
 }
+@function vwmac ($px, $resolution: 1680) {
+	@return $px / $resolution * 100 * 1vw;
+}

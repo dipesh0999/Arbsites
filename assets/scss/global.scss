@@ -105,6 +105,11 @@ ul{
 .navBttns{
     .active{
         color: $secondary !important;
+        svg{
+            path{
+                stroke: $secondary;
+            }
+        }
     }
 }
 .subHeading{
